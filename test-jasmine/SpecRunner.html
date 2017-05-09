@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.6.1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.6.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.6.1/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-2.6.1/jasmine.js"></script>
+
+  <script type="text/javascript" src="lib/requirejs/require.js"></script>
+  <script type="text/javascript" src="lib/jasmine-2.6.1/jasmine-html.js"></script>
+  <script type="text/javascript" src="lib/jasmine-2.6.1/boot.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="src/Player.js"></script>
+  <script type="text/javascript" src="src/Song.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/SpecHelper.js"></script>
+  <script type="text/javascript" src="spec/PlayerSpec.js"></script>
+  
+  
+  <script>
+    define(function (require) {
+        var Reporter = require('jasmine-terminal-reporter');
+        var reporter = new Reporter()
+        
+         var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+         jasmine.getEnv().clearReporters();               // remove default reporter logs
+         jasmine.getEnv().addReporter(new SpecReporter({  // add jasmine-spec-reporter
+            spec: {
+              displayPending: true
+            }
+          }));
+    });
+   //var Reporter = require('jasmine-terminal-reporter');
+   
+   
+  // var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
+  //   jasmine.getEnv().clearReporters();               // remove default reporter logs
+  //   jasmine.getEnv().addReporter(new SpecReporter({  // add jasmine-spec-reporter
+  //     spec: {
+  //       displayPending: true
+  //     }
+  //   }));
+    
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>
